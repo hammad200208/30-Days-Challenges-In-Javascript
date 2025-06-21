@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day11</title>
+</head>
+<body>
+    <h3>
+        Some of digits
+    </h3>
+
+    <script>
+        const sumOfDigits = (num) =>{
+            let arr = Array.from(String(num),Number)
+            return arr.reduce((accum , curElem) => accum += curElem);
+        }
+
+
+        console.log(sumOfDigits(1234));
+        console.log(sumOfDigits(1233242344));
+        console.log(sumOfDigits(123424234));
+    </script>
+</body>
+</html>

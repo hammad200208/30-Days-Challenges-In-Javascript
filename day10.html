@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day10</title>
+</head>
+<body>
+    <h3>
+        Arrays are Equal Return True else False
+    </h3>
+
+    <script>
+        const arrayAreEqual = (arr1 , arr2) =>{
+            if(arr1.length !== arr2.length){
+                return false;
+            }
+            return arr1.every((curVal , index) => curVal === arr2[index]);
+        }
+
+console.log(arrayAreEqual([1,2,3] , [1,2,3]));
+console.log(arrayAreEqual([1,2,3] , [1,2,4,]));
+console.log(arrayAreEqual([] , []));
+    </script>
+</body>
+</html>

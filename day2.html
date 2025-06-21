@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HashTag Generator</title>
+</head>
+<body>
+    <h4> Hashtag Generator</h4>
+    <h4>String to array</h4>
+    <h4>Cpaitilize</h4>
+    <h4>Concenated</h4>
+    <h4>If greater than 280 words or its an empty string return false</h4>
+</body>
+
+<script>
+    const str = "watch thapa tecnical videos on youtube";
+
+    const hashTag = (str) => {
+        if (str.length > 280 || str.trim().length === 0) {
+            return false;
+        }
+    
+        let words = str.split(" ");
+        words = words.map((curElem) => 
+           // curElem.replace(curElem[0], curElem[0].toUpperCase())
+           curElem.charAt(0).toUpperCase() + curElem.slice(1)
+        );
+        console.log(words);
+        
+        let hashtag = `#${words.join("")}`;
+        console.log(hashtag);
+        return hashtag;
+    };
+    
+    console.log(hashTag(str));
+    
+    
+</script>
+
+</html>

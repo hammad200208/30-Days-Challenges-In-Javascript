@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day31</title>
+</head>
+<body>
+    <h3>
+        Password Validation
+    </h3>
+</body>
+<script>
+    // const ValidatorPassword = (password) =>{
+    //     const minLength = 8;
+    //     const hasUpperCase = /[A-Z]/.test(password);
+    //     const hasLowerCase = /[a-z]/.test(password);
+    //     const hasNumber = /[0-9]/.test(password);
+    //     const hasSpecialCharacters = /[!@#$%^&*{}<>]/.test(password);
+
+
+    //     if(password.length < minLength){
+    //         return "Password must be atleast 8 characters long";
+    //     }
+    //     if(!hasUpperCase){
+    //         return "Passsword must include atleast one UpperCase letter";
+    //     }
+    //     if(!hasLowerCase){
+    //         return "Password must include atleast one Lowercase letter";
+    //     }
+    //     if(!hasNumber){
+    //         return "Password must include atleast one number";
+    //     }
+    //     if(!hasSpecialCharacters){
+    //         return "Password must include atleast one SpecialCharacter";
+    //     }
+    //     return "password is valid";
+    // } 
+    // console.log(ValidatorPassword("Weakpass"));
+    // console.log(ValidatorPassword("Strongpassword1@"));
+
+
+
+    // Second method
+
+    const ValidatorPassword = (password) =>{
+        const minLength = 8;
+        const hasUpperCase = /[A-Z]/.test(password);
+        const hasLowerCase = /[a-z]/.test(password);
+        const hasNumber = /[0-9]/.test(password);
+        const hasSpecialCharacters = /[!@#$%^&*{}<>]/.test(password);
+
+
+        if(password.length < minLength || 
+            !hasUpperCase||
+            !hasLowerCase||
+            !hasNumber||
+            !hasSpecialCharacters
+        ){
+            return false;
+        }
+        return "password is valid";
+    }
+    
+    console.log(ValidatorPassword("Weakpass"));
+    console.log(ValidatorPassword("Strongpassword1@"));
+
+</script>
+</html>

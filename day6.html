@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day</title>
+</head>
+<body>
+    <h3>Palindrom</h3>
+    <h3>Is a string is Palindrom return true | False</h3>
+</body>
+
+<script>
+    const isPalindrom = (str) =>{
+        str = str.toLowerCase().replace(/\W/g, "");
+        let rStr = str.split(" ").reverse().join("")
+        console.log(rStr);
+        return str === rStr ? true : false;
+    };
+
+    console.log(isPalindrom("A Man , a plan , a canal, Panama"));
+    console.log(isPalindrom("racecar"));
+    console.log(isPalindrom("hello"));
+</script>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day27</title>
+</head>
+<body>
+    <h3>
+        Repeat String
+    </h3>
+</body>
+<script>
+    const repeatString = (str, num) => {
+     
+    //     if (num === 1) {
+    //         return str;
+    //     } else {
+    //         return str + repeatString(str, num - 1);
+    //     }
+    //
+    return num > 0 ? str.repeat(num) : str;
+     }
+    console.log(repeatString("abc" , 5));
+</script>
+</html>

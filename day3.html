@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3</title>
+</head>
+<body>
+    <h3>Count Characters</h3>
+</body>
+<script>
+
+    const countChar = (word , char) =>{
+        word = word.toLowerCase();
+        char = char.toLowerCase();
+        totalCount = word.split("").reduce((accum , curChar) =>{
+            if(curChar === char){
+                accum++;
+            }
+            return accum;
+        }, 0);
+        //console.log(totalCount);
+        return totalCount;
+    }
+
+    console.log(countChar("MissIssippi" , "I"));
+</script>
+</html>

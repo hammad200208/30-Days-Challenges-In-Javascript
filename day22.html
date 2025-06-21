@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day22</title>
+</head>
+<body>
+    <h3>
+        Calculate Median
+    </h3>
+</body>
+<script>
+ const calculateMedian = (arr) => {
+    if (arr.length === 0) return null;
+
+    const sorted = [...arr].sort((a, b) => a - b);
+    const mid = Math.floor(sorted.length / 2);
+
+    if (sorted.length % 2 !== 0) {
+        return sorted[mid]; // Odd number of elements
+    } else {
+        return (sorted[mid - 1] + sorted[mid]) / 2; // Even number of elements
+    }
+};
+
+console.log(calculateMedian([10, 20, 100])); // Output: 20
+console.log(calculateMedian([1, 2, 3, 4]));  // Output: 2.5
+
+</script>
+</html>

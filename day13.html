@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day13</title>
+</head>
+<body>
+    <h3>
+        Count Vowels
+    </h3>
+    <script>
+        const countVowels = (str) =>{
+            let vowels = ['a','e','i','o','u'] ;
+            let arr = str.split("");
+            console.log(arr);
+            let count = 0;
+            for(let char of arr){
+               if(vowels.includes(char.toLowerCase())){
+                    count++;
+                }
+            }
+            return count;
+        }
+        console.log(countVowels("Hello world"));
+        console.log(countVowels("The quick brown fox"));
+        console.log(countVowels("Brrrp"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day30</title>
+</head>
+<body>
+    <h3>
+        Recursive Number Rangegenerator
+    </h3>
+</body>
+<script>
+    const RecursiveNumGenerator =(a,b,arr=[])=>{
+        if(a<=b){
+            arr.push(a);
+            return RecursiveNumGenerator(a+1 , b , arr);
+        }
+        return arr;
+    }
+    console.log(RecursiveNumGenerator(0,10));
+    console.log(RecursiveNumGenerator(-2,20));
+</script>
+</html>

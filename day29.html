@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day29</title>
+</head>
+<body>
+    <h3>
+        Number Range Generator
+    </h3>
+</body>
+<script>
+    const rangeGenerator = (a,b)=>{
+        let arr = [];
+        while(a <= b){
+            //console.log(a);
+            arr.push(a);
+            a++;
+        }
+        return arr;
+    }
+    console.log(rangeGenerator(0,5));
+</script>
+</html>

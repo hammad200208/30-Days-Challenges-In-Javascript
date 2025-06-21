@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1</title>
+</head>
+<body>
+    <h4>finding longest word and avoiding whitesapces</h4>
+</body>
+
+<script>
+    str = "Watch Thapa Tecnical javascript course on youtube";
+    const findLongestWords = (str) =>{
+        if(str.trim().length === 0){
+            return false;
+        }
+        const word = str.split(" ");
+        return word.reduce((accum,curWord) => (curWord.length > accum.length ? curWord : accum),
+        ""
+        );
+        /*
+        words = str.split(" ");
+        console.log(words);
+        words = words.sort((a,b) => a.length - b.length);
+        console.log(words);
+        return words.at(-1);*/
+    }
+    console.log(findLongestWords(str));
+</script>
+</html>

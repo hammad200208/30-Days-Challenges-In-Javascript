@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day17</title>
+</head>
+<body>
+    <h3>
+        String to camelCase and snake-case
+    </h3>
+</body>
+
+<script>
+    const camelCase = (str) =>{
+      return str 
+      .trim()
+      .split(" ")
+      .map((curElem , index) => {
+        if (index === 0){
+            return curElem.toLowerCase();
+        }else{
+            return curElem.charAt(0).toUpperCase() + curElem.slice(1).toLowerCase();
+        }
+      })
+      .join("");   
+    }
+
+    console.log(camelCase("hello world thApa"));
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day26</title>
+</head>
+<body>
+    <h3>
+        Fibonaci Series
+    </h3>
+</body>
+<script>
+    const fibonacci = (num) =>{
+        if(num <= 1){
+            return num
+        }else{
+            return fibonacci(num - 1) + fibonacci (num - 2);
+        }
+    };
+
+    console.log(fibonacci(0));
+    console.log(fibonacci(1));
+    console.log(fibonacci(2));
+    console.log(fibonacci(3));
+</script>
+</html>
